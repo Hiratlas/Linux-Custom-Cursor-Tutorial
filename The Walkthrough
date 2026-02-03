@@ -1,0 +1,114 @@
+FILE LIST AND CREATION
+
+You will need a minimum of 14 images for the cursor. 2 more for the “hand/grabbing” images, 4 more if you care about seperating the T edge versus the I edge images (which I don’t) and one more if you want a difference for the Color Picker and Pencil images (which most people don’t care for the differeance). 
+
+This sets the minimum image count to 14 and the maximum image count to 21. This is not the file number, just the image number, as for a functioning cursor, there are duplicate image files. 
+
+Creation.
+
+To my knowledge, there is no current art program that exports in xcur files. That being said, there are plenty of programs that export in .cur files. We will be using this to our advantage. You will need to create the following .cur files. I will be doing so in the following method. 
+
+Firealpaca exports into a BitMap file to keep the Pixel Measurements exact. (this is a free program that allows you to animate as well, so you can export as .gif as well. Perfect for any aspiring artist :D)
+
+Convert the Bitmap file to a .cur file using https://imagetocursor.com/desktop, where you can set the Hotspot of the cursor. (there are ways to do it on your PC with a script, but that requires you to know the exact pixel location you want the hotspot to be, and this website just makes it easier)
+
+make the .cur files according to this list of minimum cursors
+- Denial (no)
+- Top Right Bottom Left Diagonal
+- Top Left Bottom Right Diagonal
+- Loading/Buffering
+- Default
+- Drawing/Pen
+- Vertical Bar/ Up and Down Arrows
+- Text Cursor/Ibeam
+- Horizontal Bar/Left and Right Arrows
+- Move
+- Links
+- Crosshair
+- Hand
+- Question
+- Alternative
+
+and the optional cursors listed above 
+
+- left_tee
+- right_tee
+- bottom_tee
+- top_tee (this one is not confirmed, as its unfound)
+- grab
+- hand
+- color-picker
+
+This process may take a couple days, so PLEASE TAKE YOUR TIME. Making a cursor is not a race, and the fact that there is now a Mostly documented process doesn’t make it easy haha!
+
+Now, next process is converting all the .cur files to xcur files. Despite the fact that Linux PCs can only read xcur files as valid cursors, they actually CANT read them as images, so step one is to back up a copy of your .cur files so you can see them all. This is both incase you miss a file, and incase the conversion corrupts, which happened on my first walkthrough of this process. 
+
+Download the file win2xcur, and skip to the big bold Themes text if you know how to use it. For those of us who don’t understand the win2xcur documentation, heres a walkthrough of it. 
+
+WIN2XCUR
+
+win2xcur is actually pretty easy to use, once you get it working. The problem is, its pretty hard to install in the first place, 
+
+im going to tell you how I installed it. And if someone better comes along and tells a better, more effective method of installation, ill replace this. 
+
+Download and install win2xcur as you normally would, and find it in your installation folder. The problem is, your commands directory wont be able to find the commands for win2xcur because its in the “Downloads” folder. So, go to your terminal, and run the command “echo $PATH” into your terminal. This will show you where your commands are stored. Choose the easiest to access one (normally the first one, for me it was /home/user/.local/bin/) and JUST MOVE THE WIN2XCUR COMMANDS INTO THE FOLDER THERE AS ROOT. Once youve done that, your computer will magically be able to find the commands 100% of the time. Even after reboots. Even after you loose power. Even after updates. Even as superuser. No need to route to the file, no need to do any special packages, nothing. Its just there. Saved me HOURS of my time. 
+
+Anyway. On to the next part. 
+
+Wherever you have saved your .cur files, make sure you know their location pretty well, make a folder theyre going to be converted into. Win2xcur needs a convert from folder and a convert to folder, and having those seperate saves time and frustration.
+
+Now, run this command
+
+winx2cur /input/directory/*.cur -o /output/directory
+
+and example of this command from my computer would be 
+
+win2xcur /home/user/Downloads/star-1/*.cur -o /home/user/Documents/Stars/
+
+did you convert some gifs into cursors? Then replace .cur with .ani and youre right as rain. 
+
+THEMES
+
+Were part of the way there. Were going to get the easiest yet least documented part out of the way now. How to make a cursor theme. 
+
+Make a folder
+
+name it whatever you want your cursor to be named
+
+Make a folder in that folder
+
+name it “cursors”
+
+put your cursors in that folder
+
+in the first folder make a document
+
+title it index.theme
+
+write the following. Caps does matter, Anything in parethensis- including the parethesis- can be deleted and changed. THE BRACKETS MUST REMAIN
+
+[Icon Theme]
+Name = (name of first folder (case sensitive))
+Comment = (whatevah you wanna put. Most people don’t see this)
+
+save the document
+youre done
+
+
+THEME REQUIREMENTS
+
+attached to this walkthrough will be a document titled “cursor types” this will be all the cursor types I could find in the files along with their names. All the types are the named files you made above. Make duplicates and match them to the filenames. 
+
+For example, for the “text cursor” file, you should make 3 of them, and name them “xterm” “ibeam” and “text” respectivly. Once this is done, you will have your theme. 
+
+INSTALLING YOUR CURSOR
+
+ok, so you have your cursor, its saved as a theme, now what?
+
+If youve installed a custom cursor before, this is going to feel familiar to you.
+
+Under /user/ either find or create the ~/.icons/ folder. Put the folder in there, then run the sudo update-icon-caches /user/.icons/* command.
+
+Then load up your new cursor. Thats it
+
+this is the culmination of 2 weeks of research and study, please share this.
