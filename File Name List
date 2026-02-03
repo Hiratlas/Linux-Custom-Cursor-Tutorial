@@ -1,0 +1,82 @@
+Denial (no)
+    • circle
+    • crossed-circle
+    • forbidden
+    • no-drop
+    • not_allowed
+Top Right Bottom Left Diagonal
+    • diagonal2
+    • ll_angle
+    • ne-resize
+    • size_fdiag
+    • se_resize
+    • nw-resize
+Top Left Bottom Right Diagonal
+    • diagonal1
+    • lr_angle
+    • nesw-resize
+    • size_bdiag
+Loading/Buffering
+    • half-busy
+    • left_ptr_watch
+    • progress
+    • wait
+    • watch
+Default
+    • default
+    • pointer
+Drawing/Pen
+    • draft
+    • pencil
+    • color-picker
+Vertical Bar/Up and Down arrows
+    • ns-resize
+    • s-resize
+    • sb_down_arrow
+    • sb_up_arrow
+    • sb_v_double_arrow
+    • size_ver
+    • bottom_side
+    • bottom_tee
+Text Cursor
+    • xterm
+    • ibeam
+    • text
+Horzontal Bar/ Left and Right arrows
+    • col-resize
+    • left_side
+    • left_tee
+    • right_side
+    • right_tee
+    • row-resize
+    • sb_h_double_arrow
+    • sb_left_arrow
+    • sb_right_arrow
+    • size_hor
+Move
+    • all_scroll
+    • fleur
+    • move
+    • size_all
+Links
+    • alias
+    • link
+Crosshair
+    • crosshair
+Hand
+    • grab
+    • hand
+    • hand1
+    • hand2
+    • grabbing
+    • plus
+Question
+    • question-arrow
+    • left_ptr_help
+    • help
+    • context-menu
+Alternative
+    • pirate
+    • openhand
+    • pointing-hand
+    • arrow
